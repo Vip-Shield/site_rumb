@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUMB – UPP Pavão</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #111827 0%, #020617 60%);
+      color: #e5e7eb;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(120deg, rgba(56,189,248,0.05) 0%, rgba(0,0,0,0) 60%);
+      pointer-events: none;
+      animation: drift 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift {
+      from { transform: translateX(-5%) translateY(-5%); }
+      to { transform: translateX(5%) translateY(5%); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #020617);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f2933;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .3s;
+    }
+
+    nav a:hover { color: #38bdf8; }
+
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .hero.show { opacity: 1; transform: translateY(0); }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    section.show { opacity: 1; transform: translateY(0); }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 4px solid #38bdf8;
+      padding-left: 12px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1f2933;
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.3);
+      transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      border-color: rgba(56,189,248,.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      border-top: 1px solid #1f2933;
+      color: #6b7280;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,.4);
+      transition: transform .3s;
+      z-index: 1000;
+    }
+
+    .whatsapp:hover { transform: scale(1.1); }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; gap:15px;">
+    <img src="caveira-armada.png" alt="RUMB PMERJ" height="60" />
+    <div>
+      <div style="font-size:1.4rem; font-weight:700;">UPP Pavão</div>
+      <div style="font-size:.9rem; color:#9ca3af;">3ª UPP / 19º BPM</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#diretrizes">Diretrizes</a>
+    <a href="#quartilheiro">Quartilheiro</a>
+    <a href="mailto:rumb2upp19bpm@outlook.com">E-mail</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>RUMB – Reserva de Unidades de Material Bélico</h1>
+  <p>Controle, cautela e responsabilidade no gerenciamento de armamento e equipamentos da PMERJ.</p>
+</div>
+
+<section id="diretrizes">
+  <h2>Diretrizes</h2>
+  <div class="card">
+    <p>O acautelamento de armamento e colete balístico segue rigorosamente os Boletins Internos da Corporação.</p>
+    <p style="margin-top:15px;">
+      <a href="BOL-PM-004-07-JAN-2021.pdf" target="_blank" style="color:#38bdf8; text-decoration:none;">📄 BOL PM 004 – 07 JAN 21</a><br><br>
+      <a href="regras_de_acautelamento_de_colete.html" style="color:#38bdf8; text-decoration:none;">📄 Regras de Acautelamento de Colete (Ciência Obrigatória)</a>
+    </p>
+  </div>
+</section>
+
+<section id="quartilheiro">
+  <h2>Quartilheiro</h2>
+  <div class="card">
+    <p>Responsável pelo controle, registro, cautela e fiscalização do material bélico da unidade.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© PMERJ – RUMB | UPP Pavão – 3ª UPP / 19º BPM</p>
+  <p style="font-size:.9rem; color:#9ca3af;">Uso institucional • BOL PM nº 004 – 07 JAN 2021</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/552164827877" target="_blank">☎</a>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.hero, section').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
